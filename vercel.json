@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "https://sgrz-251172-9-1426117562.sh.run.tcloudbase.com/$1"
+    }
+  ]
+}
