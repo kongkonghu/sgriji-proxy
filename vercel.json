@@ -1,8 +1,7 @@
 {
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "https://sgrz-251172-9-1426117562.sh.run.tcloudbase.com/$1"
-    }
+  "routes": [
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/api/(.*)", "dest": "https://sgrz-251172-9-1426117562.sh.run.tcloudbase.com/api/$1" },
+    { "src": "/(.*)", "dest": "https://sgrz-251172-9-1426117562.sh.run.tcloudbase.com/$1" }
   ]
 }
