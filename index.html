@@ -40,12 +40,6 @@
         .card ul { padding-left: 20px; }
         .card li { margin-bottom: 10px; color: #555; }
         .card p { color: #555; margin-bottom: 12px; }
-        footer { 
-            text-align: center; 
-            padding: 30px; 
-            color: #999; 
-            font-size: 14px;
-        }
         .tag { 
             display: inline-block; 
             background: #e8ecff; 
@@ -55,7 +49,72 @@
             font-size: 13px; 
             margin: 5px 5px 0 0;
         }
+
+        /* 项目分享板块样式 */
+        .project-item {
+            border: 1px solid #e8ecff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .project-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(102, 126, 234, 0.15);
+        }
+        .project-item h3 {
+            color: #667eea;
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+        .project-item p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+        .project-item .tech-tags {
+            margin: 8px 0 12px 0;
+        }
+        .project-item .tech-tags span {
+            display: inline-block;
+            background: #f0f4ff;
+            color: #667eea;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-right: 6px;
+            margin-bottom: 5px;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 13px;
+            transition: opacity 0.2s;
+        }
+        .download-btn:hover {
+            opacity: 0.85;
+        }
+
+        footer { 
+            text-align: center; 
+            padding: 30px; 
+            color: #999; 
+            font-size: 14px;
+        }
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
+<base target="_blank">
 </head>
 <body>
     <div class="container">
@@ -99,6 +158,58 @@
         </div>
 
         <div class="card">
+            <h2>📦 开源项目与工具分享</h2>
+
+            <div class="project-item">
+                <h3>材料涨价自动选股程序</h3>
+                <div class="tech-tags">
+                    <span>Python</span>
+                    <span>AkShare</span>
+                    <span>Tushare</span>
+                    <span>自动推送</span>
+                </div>
+                <p>根据大宗商品材料涨价信息，自动分析产业链传导效应并筛选受益股票的智能化工具。支持每日定时运行，通过企业微信/钉钉/邮件推送选股结果，包含 A/B/C 三级推荐策略与可视化报告。</p>
+                <a href="./downloads/material-stock-picker.zip" class="download-btn" download>⬇️ 下载源码</a>
+            </div>
+
+            <div class="project-item">
+                <h3>施工日志在线填报系统</h3>
+                <div class="tech-tags">
+                    <span>Django</span>
+                    <span>微信小程序</span>
+                    <span>多人在线协作</span>
+                    <span>Word导出</span>
+                </div>
+                <p>面向工程项目团队的施工日志在线填报与管理系统。支持多人同时填写同一工程同一天的日志并自动合并内容，支持按工程归档、权限控制（填写/查看/删除分级管理），一键导出标准格式 Word 文档。</p>
+                <a href="./downloads/construction-log-system.zip" class="download-btn" download>⬇️ 下载源码</a>
+            </div>
+
+            <div class="project-item">
+                <h3>在线安全培训考试系统</h3>
+                <div class="tech-tags">
+                    <span>Django</span>
+                    <span>PostgreSQL</span>
+                    <span>微信云托管</span>
+                    <span>防作弊</span>
+                </div>
+                <p>基于 Django 的在线安全培训与考试平台，支持题库管理、随机抽卷、限时考试、自动评分。适配微信云托管部署，具备完善的权限管理与数据保护机制，适用于施工现场安全培训考核场景。</p>
+                <a href="./downloads/safety-exam-system.zip" class="download-btn" download>⬇️ 下载源码</a>
+            </div>
+
+            <div class="project-item">
+                <h3>作业许可微信小程序</h3>
+                <div class="tech-tags">
+                    <span>微信小程序</span>
+                    <span>Django REST</span>
+                    <span>微信云托管</span>
+                    <span>审批流程</span>
+                </div>
+                <p>工业现场作业许可（PTW）管理小程序，支持作业票填写、审批人选择、微信好友转发审批、状态跟踪。后端采用 Django + 微信云托管，具备完整的权限控制与数据安全机制。</p>
+                <a href="./downloads/ptw-wechat-app.zip" class="download-btn" download>⬇️ 下载源码</a>
+            </div>
+        </div>
+
+        <div class="card">
             <h2>📮 联系方式</h2>
             <p>如有技术交流或合作意向，欢迎通过以下方式联系：</p>
             <ul>
@@ -108,8 +219,10 @@
         </div>
 
         <footer>
-            <p>© 2026 个人技术空间 | 备案号：京ICP备XXXXXXXX号</p>
-            <p style="font-size:12px; margin-top:8px;">本站为个人学习记录用途，内容仅代表个人观点</p>
+            <p>
+                <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer">豫ICP备2026022656号</a>
+            </p>
+            <p style="margin-top:8px; font-size:12px;">本站为个人学习记录用途，内容仅代表个人观点</p>
         </footer>
     </div>
 </body>
